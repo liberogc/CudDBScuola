@@ -4,6 +4,10 @@ public class Studenti {
 	String nome,cognome,facolta;
 	int matricola;
 	
+	@Override
+	public String toString() {
+		return "nome: " + nome + ", cognome: " + cognome + ", facolta: " + facolta + ", matricola: " + matricola;
+	}
 	public String getNome() {
 		return nome;
 	}

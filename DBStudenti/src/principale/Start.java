@@ -2,6 +2,7 @@ package principale;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import dao.DaoStudenti;
 import modelli.Studenti;
@@ -27,7 +28,11 @@ public class Start {
 				daostu.salvaOggetto(studente);
 				break;
 			case 2:   // cerca studenti lista
-				
+				ResultSet rs=daostu.cercaFacoltaStu();
+				ArrayList<Studenti> listafacolta=daostu.RsToArray(rs);
+				for (Studenti studenti : listafacolta) {
+					System.out.println(studenti);
+				}
 				break;
 			case 3:
 							

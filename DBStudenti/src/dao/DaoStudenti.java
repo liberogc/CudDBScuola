@@ -51,8 +51,21 @@ public class DaoStudenti extends ConnettiSchema implements IDaoStudenti {
 
 	@Override
 	public ArrayList<Studenti> RsToArray(ResultSet result) {
-		
-		return null;
+		try {
+			while(result.next()) {
+				Studenti stu = new Studenti();
+				stu.setNome(result.getString("nome"));
+				stu.setCognome(result.getString("cognome"));
+				stu.setFacolta(result.getString("facolta"));
+				stu.setMatricola(result.getInt("matricola"));
+				alstu.add(stu);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return alstu;
 	}
 
 	@Override
