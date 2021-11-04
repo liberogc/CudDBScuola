@@ -29,7 +29,7 @@ public class Generica {
 	
 	public void menu1(){
 		System.out.println("1-Inserimento Studenti");
-		System.out.println("2-Cerca Studenti e visualizza");
+		System.out.println("2-Lista Studenti x Facoltà");
 		System.out.println("3-Elimina Studente");
 		System.out.println("4 Cerca Studente e modifica una campo");
 		System.out.println("0-Termina");

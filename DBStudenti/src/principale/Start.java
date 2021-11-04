@@ -1,5 +1,8 @@
 package principale;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import dao.DaoStudenti;
 import modelli.Studenti;
 
@@ -23,7 +26,7 @@ public class Start {
 				Studenti studente=daostu.creaOggetto();
 				daostu.salvaOggetto(studente);
 				break;
-			case 2:
+			case 2:   // cerca studenti lista
 				
 				break;
 			case 3:
